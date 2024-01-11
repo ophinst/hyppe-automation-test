@@ -1,0 +1,6 @@
+robotframework==6.0.2
+robotframework-appiumlibrary==2.0.0
+robotframework-seleniumlibrary==6.1.0
+selenium==4.9.1
+robotframework-debuglibrary==2.3
+requests==2.25.1

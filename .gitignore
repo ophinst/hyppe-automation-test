@@ -1,0 +1,6 @@
+log.html
+output.xml
+report.html
+*venv/
+*.pyc
+appium-log.txt
