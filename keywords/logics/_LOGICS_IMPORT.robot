@@ -4,3 +4,4 @@ Resource    LoginLogic.robot
 Resource    BannerLogic.robot
 Resource    CameraLogic.robot
 Resource    UploadDetailsLogic.robot
+Resource    OnboardingLogic.robot

@@ -5,3 +5,4 @@ Resource    BannerPage.robot
 Resource    HomepagePage.robot
 Resource    CameraPage.robot
 Resource    UploadDetailsPage.robot
+Resource    OnboardingPage.robot
