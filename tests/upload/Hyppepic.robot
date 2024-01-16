@@ -47,3 +47,6 @@ Upload Hyppepic via Camera Capture
     # Assertion
     BannerLogic.Close Successfully Uploaded Banner
     HomepagePage.Verify On Homepage
+
+View Hyppepic Content Details
+    

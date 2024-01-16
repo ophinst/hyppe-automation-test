@@ -2,3 +2,8 @@
 Verify On Homepage
     AppiumLibrary.Wait Until Element Is Visible         xpath=//android.view.View[@content-desc="Cerita Anda"]              timeout=15s
     
+Verify Hyppepic Tab
+    AppiumLibrary.Wait Until Element Is Visible         xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.ScrollView/android.view.View[4]/android.view.View[@index=0]   timeout=15s
+
+Click Hyppepic Tab
+    AppiumLibrary.Click Element         xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.ScrollView/android.view.View[4]/android.view.View[@index=0]

@@ -2,12 +2,13 @@
 Resource            ../../resource.robot
 Suite Setup         Spawn Appium Server
 Test Setup          Open App
-Test Teardown       Run Keyword If Test Failed    Capture Failed
+Test Teardown       Capture Failed
 Suite Teardown      Close Appium Server
 
 *** Test Case ***
 User Login
     # Arrange
+    OnboardingLogic.Select Masuk Button
     AuthLogic.Select Login Via Email Button
 
     # Action
@@ -20,3 +21,4 @@ User Login
 
     # Assertion
     HomepagePage.Verify On Homepage
+    debug

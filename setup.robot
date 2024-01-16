@@ -25,6 +25,7 @@ Open App
 
 Open App and Login
     Open App
+    OnboardingLogic.Select Masuk Button
     AuthLogic.Select Login Via Email Button
     LoginLogic.Input Login and Password Via Email Login
     DeviceHelper.Press Back
