@@ -1,10 +1,12 @@
 *** Keywords ***
 Spawn Appium Server
-  ${APPIUM_INSTANCE}    Start Process    appium
-  ...                   -p               ${PORT}
-  ...                   stdout=${EXECDIR}/appium-log.txt
-  Set Suite Variable    ${APPIUM_INSTANCE}
-  Wait Until Appium Ready   ${PORT}           40
+    [Documentation]     Use cmd /c path to your appium.cmd if you are on Windows
+    # ${APPIUM_INSTANCE}    Start Process    cmd    /c    E:\\Node.js\\appium.cmd 
+    ${APPIUM_INSTANCE}    Start Process    appium
+    ...                   -p               ${PORT}
+    ...                   stdout=${EXECDIR}/appium-log.txt
+    Set Suite Variable    ${APPIUM_INSTANCE}
+    Wait Until Appium Ready    ${PORT}    40
 
 Open App
     Open Application
@@ -22,12 +24,12 @@ Open App
     ...    adbExecTimeout=90000
 
 Open App and Login
-  Open App
-  AuthLogic.Select Login Via Email Button
-  LoginLogic.Input Login and Password Via Email Login
-  DeviceHelper.Press Back
-  LoginPage.Verify Sign In Button Shown
-  LoginPage.Click Sign In Button
-  DeviceHelper.Allow App Permission
-  BannerLogic.Close Home Banner
-  HomepagePage.Verify On Homepage
+    Open App
+    AuthLogic.Select Login Via Email Button
+    LoginLogic.Input Login and Password Via Email Login
+    DeviceHelper.Press Back
+    LoginPage.Verify Sign In Button Shown
+    LoginPage.Click Sign In Button
+    DeviceHelper.Allow App Permission
+    BannerLogic.Close Home Banner
+    HomepagePage.Verify On Homepage

@@ -1,9 +1,9 @@
 *** Settings ***
-Resource          ../../resource.robot
-Suite Setup       Spawn Appium Server
-Test Setup        Open App
-Test Teardown     Capture Failed
-Suite Teardown    Close Appium Server
+Resource            ../../resource.robot
+Suite Setup         Spawn Appium Server
+Test Setup          Open App
+Test Teardown       Run Keyword If Test Failed    Capture Failed
+Suite Teardown      Close Appium Server
 
 *** Test Case ***
 User Login
