@@ -13,7 +13,7 @@ Verify Hyppepic Tab Is Focused
 
 Choose Random Content
     [Documentation]     Will choose first content appears in the homepage
-    ${x}=       Set Variable    88
-    ${y}=       Set Variable    992
+    ${x}=       Set Variable    528
+    ${y}=       Set Variable    1261
     @{coordinate}=      Create List     ${x}    ${y}
     AppiumLibrary.Tap With Positions     ${500}  ${coordinate}
