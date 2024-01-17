@@ -13,4 +13,7 @@ Verify Hyppepic Tab Is Focused
 
 Choose Random Content
     [Documentation]     Will choose first content appears in the homepage
-    AppiumLibrary.Click Element         xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.ScrollView/android.view.View[5]/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView[2]
+    ${x}=       Set Variable    88
+    ${y}=       Set Variable    992
+    @{coordinate}=      Create List     ${x}    ${y}
+    AppiumLibrary.Tap With Positions     ${500}  ${coordinate}
