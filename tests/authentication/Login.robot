@@ -21,4 +21,3 @@ User Login
 
     # Assertion
     HomepagePage.Verify On Homepage
-    debug

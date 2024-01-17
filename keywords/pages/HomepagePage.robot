@@ -7,3 +7,10 @@ Verify Hyppepic Tab
 
 Click Hyppepic Tab
     AppiumLibrary.Click Element         xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.ScrollView/android.view.View[4]/android.view.View[@index=0]
+
+Verify Hyppepic Tab Is Focused
+    AppiumLibrary.Element Attribute Should Match            xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.ScrollView/android.view.View[4]/android.view.View[@index=0]           selected        true
+
+Choose Random Content
+    [Documentation]     Will choose first content appears in the homepage
+    AppiumLibrary.Click Element         xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.ScrollView/android.view.View[5]/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView[2]

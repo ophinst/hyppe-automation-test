@@ -49,4 +49,11 @@ Upload Hyppepic via Camera Capture
     HomepagePage.Verify On Homepage
 
 View Hyppepic Content Details
-    
+    # Arrange
+    HomepageLogic.Select Hyppepic Tab
+
+    # Action
+    HomepagePage.Choose Random Content
+
+    # Assertion
+    ContentDetailsPage.Verify On Content Details Page
