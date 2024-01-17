@@ -58,6 +58,18 @@ View Hyppepic Content Details
     # Assertion
     ContentDetailsPage.Verify On Content Details Page
 
+Click on Like at Hyppepic Content Details
+    # Arrange
+    HomepageLogic.Select Hyppepic Tab
+
+    # Action
+    HomepagePage.Choose Random Content
+    Sleep       3s
+    ContentDetailsLogic.Click Like Button
+
+    # Assertion
+    ContentDetailsPage.Verify On Content Details Page
+
 Comment On Hyppepic Content Details
     # Arrange
     HomepageLogic.Select Hyppepic Tab
