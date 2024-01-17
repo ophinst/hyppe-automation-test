@@ -51,3 +51,13 @@ Upload Hyppevid via Camera Capture
     # Assertion
     BannerLogic.Close Successfully Uploaded Banner
     HomepagePage.Verify On Homepage
+
+View Hyppevid Content Details
+    # Arrange
+    HomepageLogic.Select Hyppevid Tab
+
+    # Action
+    HomepagePage.Choose Random Content
+
+    # Assertion
+    ContentDetailsPage.Verify On Hyppevid Fullscreen
