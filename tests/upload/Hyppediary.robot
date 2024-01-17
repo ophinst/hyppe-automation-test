@@ -51,3 +51,13 @@ Upload Hyppediary via Import Media
     # Assertion
     BannerLogic.Close Successfully Uploaded Banner
     HomepagePage.Verify On Homepage
+
+View Hyppediary Content Details
+    # Arrange
+    HomepageLogic.Select Hyppediary Tab
+
+    # Action
+    HomepagePage.Choose Random Content
+
+    # Assertion
+    ContentDetailsPage.Verify On Content Details Page
