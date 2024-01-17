@@ -6,3 +6,4 @@ Resource    CameraLogic.robot
 Resource    UploadDetailsLogic.robot
 Resource    OnboardingLogic.robot
 Resource    HomepageLogic.robot
+Resource    ContentDetailsLogic.robot

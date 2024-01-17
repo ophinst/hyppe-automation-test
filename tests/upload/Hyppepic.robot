@@ -57,3 +57,14 @@ View Hyppepic Content Details
 
     # Assertion
     ContentDetailsPage.Verify On Content Details Page
+
+Comment On Hyppepic Content Details
+    # Arrange
+    HomepageLogic.Select Hyppepic Tab
+    HomepagePage.Choose Random Content
+    ContentDetailsPage.Verify On Content Details Page
+
+    # Action
+    debug
+
+    # Assertion
