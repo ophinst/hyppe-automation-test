@@ -32,5 +32,6 @@ Open App and Login
     LoginPage.Verify Sign In Button Shown
     LoginPage.Click Sign In Button
     DeviceHelper.Allow App Permission
-    BannerLogic.Close Home Banner
+    Sleep       10s
+    DeviceHelper.Press Back
     HomepagePage.Verify On Homepage

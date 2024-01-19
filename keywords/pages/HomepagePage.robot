@@ -1,6 +1,6 @@
 *** Keywords ***
 Verify On Homepage
-    AppiumLibrary.Wait Until Element Is Visible         xpath=//android.view.View[@content-desc="Cerita Anda"]              timeout=15s
+    AppiumLibrary.Wait Until Page Contains         Cerita Anda              timeout=15s
     
 Verify Hyppepic Tab
     AppiumLibrary.Wait Until Element Is Visible         xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.ScrollView/android.view.View[4]/android.view.View[@index=0]   timeout=15s
@@ -31,7 +31,8 @@ Verify Hyppevid Tab Is Focused
 
 Choose Random Content
     [Documentation]     Will choose first content appears in the homepage
-    ${x}=       Set Variable    528
+    ${x}=       Set Variable    235
     ${y}=       Set Variable    1261
     @{coordinate}=      Create List     ${x}    ${y}
+    Sleep       3s
     AppiumLibrary.Tap With Positions     ${500}  ${coordinate}

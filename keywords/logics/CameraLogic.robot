@@ -3,7 +3,7 @@ Select Import Device Media
     CameraPage.Verify On Camera Page
     CameraPage.Verify Import Media Button Shown
     CameraPage.Click Import Media Button Shown
-    Run Keyword And Ignore Error            DeviceHelper.Allow App Permission
+    Run Keyword And Ignore Error        DeviceHelper.Allow App Permission
     DeviceHelper.Choose Random Device Media
 
 Capture With Camera
@@ -15,7 +15,7 @@ Record With Camera
     CameraPage.Verify On Camera Page
     CameraPage.Verify Capture Button Shown
     CameraPage.Click Capture Button
-    Sleep       15s
+    Sleep       17s
     CameraPage.Verify Stop Record Button Shown
     CameraPage.Click Stop Record Button
     Sleep       3s
