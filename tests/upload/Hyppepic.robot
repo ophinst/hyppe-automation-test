@@ -74,9 +74,12 @@ Comment On Hyppepic Content Details
     # Arrange
     HomepageLogic.Select Hyppepic Tab
     HomepagePage.Choose Random Content
+    Sleep   3s
     ContentDetailsPage.Verify On Content Details Page
 
     # Action
-    debug
+    ContentDetailsLogic.Click Comment Button
+    CommentLogic.Input Comment
 
     # Assertion
+    CommentPage.Verify Comment Sent
