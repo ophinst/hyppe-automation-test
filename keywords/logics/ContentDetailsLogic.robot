@@ -1,8 +1,9 @@
 *** Keywords ***
-Select Comment Button
+Click Comment Button
     ContentDetailsPage.Verify On Content Details Page
-    ContentDetailsPage.Verify Comment Button Shown
-    ContentDetailsPage.Click Comment Button
+    ${status}=          Run Keyword And Return Status     ContentDetailsPage.Verify Cart Icon on Fullscreen
+    Run Keyword If      '${status}'=='False'              ContentDetailsPage.Click Fullscreen Comment Button
+    Run Keyword If      '${status}'=='True'               ContentDetailsPage.Click Hyppepic Fullscren Like Button 
 
 Click Like Button
     AppiumLibrary.Capture Page Screenshot

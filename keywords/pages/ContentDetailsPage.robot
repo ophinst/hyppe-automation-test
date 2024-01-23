@@ -4,14 +4,12 @@ Verify On Content Details Page
 
 Verify On Vid Content Details Page
     AppiumLibrary.Wait Until Element Is Visible         xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View       timeout=10s
-	
-//android.view.View[@content-desc="00:00/00:00 65 minggu yang lalu"]/android.view.View[1]/android.view.View
 
-Verify Comment Button Shown
-    AppiumLibrary.Wait Until Element Is Visible         xpath=//android.view.View[@content-desc="Komentar"]     timeout=10s
-
-Click Comment Button
-    AppiumLibrary.Click Element         xpath=//android.view.View[@content-desc="Komentar"]     timeout=10s
+Click Fullscreen Comment Button
+    ${x}=       Set Variable    975
+    ${y}=       Set Variable    1900
+    @{coordinate}=      Create List     ${x}    ${y}
+    AppiumLibrary.Tap With Positions     ${500}  ${coordinate}
 
 Verify On Hyppevid Fullscreen
     AppiumLibrary.Wait Until Element Is Visible         xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View          timeout=10s

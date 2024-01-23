@@ -70,13 +70,16 @@ Click on Like at Hyppepic Content Details
     # Assertion
     ContentDetailsPage.Verify On Content Details Page
 
-# Comment On Hyppepic Content Details
-#     # Arrange
-#     HomepageLogic.Select Hyppepic Tab
-#     HomepagePage.Choose Random Content
-#     ContentDetailsPage.Verify On Content Details Page
+Comment On Hyppepic Content Details
+    # Arrange
+    HomepageLogic.Select Hyppepic Tab
+    HomepagePage.Choose Random Content
+    Sleep   3s
+    ContentDetailsPage.Verify On Content Details Page
 
-#     # Action
-#     debug
+    # Action
+    ContentDetailsLogic.Click Comment Button
+    CommentLogic.Input Comment
 
-#     # Assertion
+    # Assertion
+    CommentPage.Verify Comment Sent
