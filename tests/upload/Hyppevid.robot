@@ -1,9 +1,9 @@
 *** Settings ***
 Resource          ../../resource.robot
-Suite Setup       Spawn Appium Server
+
 Test Setup        Open App and Login
 Test Teardown     Capture Failed
-Suite Teardown    Close Appium Server
+
 
 *** Test Case ***
 Upload Hyppevid via Import Media
@@ -61,3 +61,17 @@ View Hyppevid Content Details
 
     # Assertion
     ContentDetailsPage.Verify On Hyppevid Fullscreen
+
+Click on Like at Hyppevid Content Details
+    # Arrange
+    HomepageLogic.Select Hyppevid Tab
+
+    # Action
+    HomepagePage.Choose Random Content
+    Sleep       2s
+    ContentDetailsPage.Tap Hyppevid screen
+    Sleep       2s
+    ContentDetailsLogic.Click Like Vid Button
+    
+    # Assertion
+    ContentDetailsPage.Verify On Vid Content Details Page

@@ -1,9 +1,9 @@
 *** Settings ***
 Resource          ../../resource.robot
-Suite Setup       Spawn Appium Server
+
 Test Setup        Open App and Login
 Test Teardown     Capture Failed
-Suite Teardown    Close Appium Server
+
 
 *** Test Case ***
 Upload Hyppediary via Camera Capture
@@ -58,6 +58,18 @@ View Hyppediary Content Details
 
     # Action
     HomepagePage.Choose Random Content
+
+    # Assertion
+    ContentDetailsPage.Verify On Content Details Page
+
+Click on Like at Hyppediary Content Details
+    # Arrange
+    HomepageLogic.Select Hyppediary Tab
+
+    # Action
+    HomepagePage.Choose Random Content
+    Sleep       3s
+    ContentDetailsLogic.Click Like Button
 
     # Assertion
     ContentDetailsPage.Verify On Content Details Page

@@ -1,9 +1,9 @@
 *** Settings ***
 Resource          ../../resource.robot
-Suite Setup       Spawn Appium Server
+
 Test Setup        Open App and Login
 Test Teardown     Capture Failed
-Suite Teardown    Close Appium Server
+
 
 *** Test Case ***
 Upload Hyppepic via Import Media
@@ -70,13 +70,13 @@ Click on Like at Hyppepic Content Details
     # Assertion
     ContentDetailsPage.Verify On Content Details Page
 
-Comment On Hyppepic Content Details
-    # Arrange
-    HomepageLogic.Select Hyppepic Tab
-    HomepagePage.Choose Random Content
-    ContentDetailsPage.Verify On Content Details Page
+# Comment On Hyppepic Content Details
+#     # Arrange
+#     HomepageLogic.Select Hyppepic Tab
+#     HomepagePage.Choose Random Content
+#     ContentDetailsPage.Verify On Content Details Page
 
-    # Action
-    debug
+#     # Action
+#     debug
 
-    # Assertion
+#     # Assertion
