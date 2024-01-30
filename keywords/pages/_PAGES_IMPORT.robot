@@ -8,3 +8,4 @@ Resource    UploadDetailsPage.robot
 Resource    OnboardingPage.robot
 Resource    ContentDetailsPage.robot
 Resource	CommentPage.robot
+Resource	ProfilePage.robot

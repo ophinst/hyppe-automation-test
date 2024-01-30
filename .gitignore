@@ -4,3 +4,4 @@ report.html
 *venv/
 *.pyc
 appium-log.txt
+__pycache__

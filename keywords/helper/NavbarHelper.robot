@@ -19,3 +19,9 @@ Click Hyppevid Section
 
 Click Hyppestory Section
     AppiumLibrary.Click Element         xpath=//android.widget.ImageView[@index=2]
+
+Verify Profile Section Shown
+    AppiumLibrary.Wait Until Element Is Visible         xpath=//android.view.View/android.view.View[3]/android.widget.ImageView[4]        timeout=10s
+
+Click Profile Section
+    AppiumLibrary.Click Element         xpath=//android.view.View/android.view.View[3]/android.widget.ImageView[4]

@@ -13,3 +13,4 @@ Choose Random Device Media
     ${status} =     Run Keyword And Return Status    AppiumLibrary.Wait Until Element Is Visible    id=${element}    timeout=10s
     Run Keyword If    '${status}' == 'False'    Set Suite Variable    ${element}    com.google.android.documentsui:id/icon_thumb
     AppiumLibrary.Click Element    id=${element}
+

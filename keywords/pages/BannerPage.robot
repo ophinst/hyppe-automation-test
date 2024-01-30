@@ -17,3 +17,6 @@ Verify Content Successfully Uploaded Banner Shown
 
 Click OK on Content Uploaded Banner
     AppiumLibrary.Click Element         xpath=//android.widget.Button[@content-desc="Ok"]
+
+Verify Save Profile Success Banner
+    AppiumLibrary.Wait Until Element Is Visible         //android.view.View[@content-desc="Sukses perbarui informasi pribadi"]      timeout=10s
