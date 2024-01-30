@@ -32,6 +32,6 @@ Open App and Login
     LoginPage.Verify Sign In Button Shown
     LoginPage.Click Sign In Button
     DeviceHelper.Allow App Permission
-    Sleep       10s
+    DeviceHelper.Allow App Permission
     DeviceHelper.Press Back
     HomepagePage.Verify On Homepage

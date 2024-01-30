@@ -27,3 +27,32 @@ Verify Save Profile Change Button Shown
 
 Click Save Profile Change Button
     AppiumLibrary.Click Element         xpath=//android.widget.Button[@content-desc=" Simpan"]
+
+Click a Pic Content
+    ${x}=       Set Variable    174
+    ${y}=       Set Variable    1260
+    @{coordinate}=      Create List     ${x}    ${y}
+    AppiumLibrary.Tap With Positions     ${500}  ${coordinate}
+
+Click on Setting
+    ${x}=       Set Variable    952
+    ${y}=       Set Variable    383
+    @{coordinate}=      Create List     ${x}    ${y}
+    AppiumLibrary.Tap With Positions     ${500}  ${coordinate}
+
+Click on Share
+    AppiumLibrary.Click Element         xpath=//android.widget.ImageView[@content-desc="Bagikan"]
+
+Verify Share Content
+    AppiumLibrary.Page Should Contain Text      https://share.hyppe.app
+
+Click on Copy 
+    ${x}=       Set Variable    228
+    ${y}=       Set Variable    1767
+    @{coordinate}=      Create List     ${x}    ${y}
+    AppiumLibrary.Tap With Positions     ${500}  ${coordinate}
+
+Verify Copy Content
+    AppiumLibrary.Page Should Contain Text   xpath=//android.widget.Button[@content-desc="Ok"]
+
+    
