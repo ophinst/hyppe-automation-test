@@ -28,17 +28,14 @@ Verify Save Profile Change Button Shown
 Click Save Profile Change Button
     AppiumLibrary.Click Element         xpath=//android.widget.Button[@content-desc=" Simpan"]
 
-Click a Pic Content
+Select Random Post on Profile Page
     ${x}=       Set Variable    174
     ${y}=       Set Variable    1260
     @{coordinate}=      Create List     ${x}    ${y}
     AppiumLibrary.Tap With Positions     ${500}  ${coordinate}
 
 Click on Setting
-    ${x}=       Set Variable    952
-    ${y}=       Set Variable    383
-    @{coordinate}=      Create List     ${x}    ${y}
-    AppiumLibrary.Tap With Positions     ${500}  ${coordinate}
+    AppiumLibrary.Click Element         xpath=//android.view.View[@index=2]
 
 Click on Share
     AppiumLibrary.Click Element         xpath=//android.widget.ImageView[@content-desc="Bagikan"]
@@ -46,13 +43,17 @@ Click on Share
 Verify Share Content
     AppiumLibrary.Page Should Contain Text      https://share.hyppe.app
 
-Click on Copy 
-    ${x}=       Set Variable    228
-    ${y}=       Set Variable    1767
-    @{coordinate}=      Create List     ${x}    ${y}
-    AppiumLibrary.Tap With Positions     ${500}  ${coordinate}
+Click on Copy Link
+    AppiumLibrary.Click Element         xpath=//android.widget.ImageView[@content-desc="Salin Tautan"]
 
-Verify Copy Content
-    AppiumLibrary.Page Should Contain Text   xpath=//android.widget.Button[@content-desc="Ok"]
+Verify Copy Link Button Shown
+    AppiumLibrary.Wait Until Element Is Visible         xpath=//android.widget.ImageView[@content-desc="Salin Tautan"]      timeout=10s
 
-    
+Verify Share Button Shown
+    AppiumLibrary.Wait Until Element Is Visible         xpath=//android.widget.ImageView[@content-desc="Bagikan"]      timeout=10s
+
+Verify Edit Post Button Shown
+    AppiumLibrary.Wait Until Element Is Visible         xpath=//android.widget.ImageView[@content-desc="Sunting"]       timeout=10s
+
+Click Edit Post Button
+    AppiumLibrary.Click Element         xpath=//android.widget.ImageView[@content-desc="Sunting"]

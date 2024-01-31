@@ -19,6 +19,7 @@ Upload Hyppepic via Import Media
     # Action
     CameraLogic.Select Import Device Media
     CameraLogic.Press Upload Button
+    UploadDetailsPage.Verify On Upload Details Page
     UploadDetailsLogic.Edit Post Details
     UploadDetailsLogic.Confirm Upload Post
     UploadDetailsLogic.Ignore Content Selling Blocker
@@ -40,6 +41,7 @@ Upload Hyppepic via Camera Capture
     # Action
     CameraLogic.Capture With Camera
     CameraLogic.Press Upload Button
+    UploadDetailsPage.Verify On Upload Details Page
     UploadDetailsLogic.Edit Post Details
     UploadDetailsLogic.Confirm Upload Post
     UploadDetailsLogic.Ignore Content Selling Blocker

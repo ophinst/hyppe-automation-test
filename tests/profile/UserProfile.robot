@@ -1,9 +1,9 @@
 *** Settings ***
-Resource          ../../resource.robot
-
-Test Setup        Open App and Login
-Test Teardown     Capture Failed
-
+Resource		../../resource.robot
+Suite Setup		Spawn Appium Server
+Test Setup		Open App and Login
+Test Teardown	Capture Failed
+Suite Teardown	Close Appium Server
 
 *** Test Case ***
 User can Go to Profile Page
@@ -19,29 +19,31 @@ User can Go to Profile Page
 User can Copy Content
 	# Arrange
 	NavbarHelper.Verify Profile Section Shown
-
-	# Action
 	NavbarHelper.Click Profile Section
 	ProfilePage.Verify on Profile Page
-	ProfilePage.Click a Pic Content
+
+	# Action
+	ProfileLogic.Select Random Post on Profile Page
+	Sleep		3s
 	ProfilePage.Click on Setting
-	Sleep 		3s
-	ProfilePage.Click on Copy 
+	ProfilePage.Verify Copy Link Button Shown
+	ProfilePage.Click on Copy Link
 	
 	# Assertion
-	Sleep 		5s
-	debug
-	ProfilePage.Verify Copy Content
+	Sleep		3s
+	BannerPage.Click OK on Sucess Banner
 
 User can Share the Content
-		# Arrange
+	# Arrange
 	NavbarHelper.Verify Profile Section Shown
-
-	# Action
 	NavbarHelper.Click Profile Section
 	ProfilePage.Verify on Profile Page
-	ProfilePage.Click a Pic Content
+
+	# Action
+	ProfileLogic.Select Random Post on Profile Page
+	Sleep		3s
 	ProfilePage.Click on Setting
+	ProfilePage.Verify Share Button Shown
 	ProfilePage.Click on Share
 
 	# Assertion

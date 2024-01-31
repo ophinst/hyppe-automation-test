@@ -1,11 +1,10 @@
 *** Keywords ***
 Edit Post Details
-    Sleep       3s
-    UploadDetailsPage.Verify On Upload Details Page
     UploadDetailsPage.Click Post Description Input
+    ${caption}=     Generate Random String  20
+    AppiumLibrary.Input Text Into Current Element           ${caption}
     Sleep       3s
-    Input Text    xpath=//android.widget.EditText       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    UploadDetailsPage.Click Post Category
+    GeneratorHelper.Choose Random Category
 
 Ignore Content Selling Blocker
     UploadDetailsPage.Verify Content Selling Blocker Shown
@@ -18,3 +17,21 @@ Confirm Upload Post
 Confirm Upload Story
     UploadDetailsPage.Verify Confirm Upload Story Button
     UploadDetailsPage.Click Confirm Upload Story Button
+
+Choose to Certify and Sell Content
+    ${x}=       Set Variable        480
+    ${y}=       Set Variable        2002
+    @{coordinate}=      Create List         ${x}    ${y}
+    AppiumLibrary.Tap With Positions     ${500}  ${coordinate}
+    UploadDetailsPage.Verify on Certify and Sell Content Page
+    UploadDetailsPage.Click Certify Content Checkbox
+    UploadDetailsPage.Verify Certify Content Pop Up Shown
+    UploadDetailsPage.Click Confirm Certify Content
+    UploadDetailsPage.Verify Content Can be Sold
+    UploadDetailsPage.Choose to Sell Content
+    UploadDetailsPage.Verify Price Input Shown
+    UploadDetailsPage.Click Price Input
+    AppiumLibrary.Input Text Into Current Element           100000
+    UploadDetailsPage.Click Confirm Price Button
+    UploadDetailsLogic.Confirm Upload Post
+    UploadDetailsPage.Verify On Edit Post Page

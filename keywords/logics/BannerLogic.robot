@@ -6,4 +6,4 @@ Close Home Banner
 
 Close Successfully Uploaded Banner
     BannerPage.Verify Content Successfully Uploaded Banner Shown
-    BannerPage.Click OK on Content Uploaded Banner
+    BannerPage.Click OK on Sucess Banner

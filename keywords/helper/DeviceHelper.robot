@@ -14,3 +14,5 @@ Choose Random Device Media
     Run Keyword If    '${status}' == 'False'    Set Suite Variable    ${element}    com.google.android.documentsui:id/icon_thumb
     AppiumLibrary.Click Element    id=${element}
 
+Verify Success Notification Shown
+    AppiumLibrary.Wait Until Page Contains      Congratulations         timeout=60s

@@ -15,8 +15,11 @@ Verify Content Successfully Uploaded Banner Shown
     AppiumLibrary.Wait Until Element Is Visible         xpath=//android.view.View[@content-desc="Konten diupload"]                timeout=50s
     AppiumLibrary.Wait Until Element Is Visible         xpath=//android.widget.Button[@content-desc="Ok"]                timeout=50s
 
-Click OK on Content Uploaded Banner
+Click OK on Sucess Banner
     AppiumLibrary.Click Element         xpath=//android.widget.Button[@content-desc="Ok"]
 
 Verify Save Profile Success Banner
     AppiumLibrary.Wait Until Element Is Visible         //android.view.View[@content-desc="Sukses perbarui informasi pribadi"]      timeout=10s
+
+Verify Hyppepic Content Successfully Edited Banner Shown
+    AppiumLibrary.Wait Until Element Is Visible         xpath=//android.widget.ImageView[@content-desc="Hyppepic Anda berhasil disimpan"]           timeout=90s

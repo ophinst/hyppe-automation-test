@@ -13,3 +13,10 @@ Generate Random String
         ${output}=    Set Variable    ${output}${character}
     END
     [Return]    ${output}
+
+Choose Random Category
+    @{categories}=    Create List    Hewan   Otomotif    Akun Selebriti  Komedi  Keseharian  Hiburan 
+    FOR    ${index}    IN RANGE    6
+        ${category}=    Evaluate    random.choice(${categories})    modules=random
+        AppiumLibrary.Click Element             xpath=//android.view.View[@content-desc="${category}"]
+    END

@@ -20,3 +20,36 @@ Verify Content Selling Blocker Shown
 
 Click Confirm on Content Selling Blocker
     AppiumLibrary.Click Element         xpath=//android.widget.Button[@content-desc="Ya, Tetap Posting"]
+
+Verify on Certify and Sell Content Page
+    AppiumLibrary.Wait Until Element Is Visible         xpath=//android.view.View[@content-desc="Kepemilikan & Penjualan"]        timeout=10s
+
+Click Certify Content Checkbox
+    AppiumLibrary.Click Element         xpath=//android.widget.CheckBox
+
+Verify Certify Content Pop Up Shown
+    AppiumLibrary.Wait Until Element Is Visible         xpath=//android.view.View[@content-desc="Pendaftaran Kepemilikan Konten"]        timeout=10s
+
+Click Confirm Certify Content
+    AppiumLibrary.Click Element         xpath=//android.widget.Button[@content-desc="Iya, Yakin"]
+
+Verify Content Can be Sold
+    AppiumLibrary.Wait Until Element Is Visible         xpath=//android.view.View[@content-desc="Jual Konten"]      timeout=10s
+
+Choose to Sell Content
+    AppiumLibrary.Click Element         xpath=//android.widget.Switch
+
+Verify Price Input Shown
+    AppiumLibrary.Wait Until Element Is Visible         xpath=//android.view.View[@content-desc="Tentukan Harga"]       timeout=10s
+
+Click Price Input
+    AppiumLibrary.Click Element         xpath=//android.widget.EditText
+
+Click Confirm Price Button
+    AppiumLibrary.Click Element         xpath=//android.view.View[@content-desc="Tentukan Harga"]
+
+Verify On Edit Post Page
+    AppiumLibrary.Wait Until Element Is Visible         xpath=//android.view.View[@content-desc="Sunting Kirim"]        timeout=10s
+
+Click on Confirm Edit Post
+    AppiumLibrary.Click Element         xpath=//android.widget.Button[@content-desc="Simpan"]

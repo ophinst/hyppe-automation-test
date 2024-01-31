@@ -1,9 +1,9 @@
 *** Settings ***
-Resource          ../../resource.robot
-
-Test Setup        Open App and Login
-Test Teardown     Capture Failed
-
+Resource		../../resource.robot
+Suite Setup		Spawn Appium Server
+Test Setup		Open App and Login
+Test Teardown	Capture Failed
+Suite Teardown	Close Appium Server
 
 *** Test Case ***
 User can Edit Profile

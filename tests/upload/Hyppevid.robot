@@ -21,6 +21,7 @@ Upload Hyppevid via Import Media
     Sleep       3s
     CameraPage.Pause Video Preview
     CameraLogic.Press Upload Button
+    UploadDetailsPage.Verify On Upload Details Page
     UploadDetailsLogic.Edit Post Details
     Sleep       3s
     UploadDetailsLogic.Confirm Upload Post
@@ -43,6 +44,7 @@ Upload Hyppevid via Camera Capture
     # Action
     CameraLogic.Record With Camera
     CameraLogic.Press Upload Button
+    UploadDetailsPage.Verify On Upload Details Page
     UploadDetailsLogic.Edit Post Details
     Sleep       3s
     UploadDetailsLogic.Confirm Upload Post
