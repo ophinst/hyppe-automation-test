@@ -3,7 +3,6 @@ Edit Post Details
     UploadDetailsPage.Click Post Description Input
     ${caption}=     Generate Random String  20
     AppiumLibrary.Input Text Into Current Element           ${caption}
-    Sleep       3s
     GeneratorHelper.Choose Random Category
 
 Ignore Content Selling Blocker
@@ -31,7 +30,7 @@ Choose to Certify and Sell Content
     UploadDetailsPage.Choose to Sell Content
     UploadDetailsPage.Verify Price Input Shown
     UploadDetailsPage.Click Price Input
-    AppiumLibrary.Input Text Into Current Element           100000
+    AppiumLibrary.Input Text Into Current Element           5000000
     UploadDetailsPage.Click Confirm Price Button
     UploadDetailsLogic.Confirm Upload Post
     UploadDetailsPage.Verify On Edit Post Page

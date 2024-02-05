@@ -33,18 +33,16 @@ Open App and Login
     LoginPage.Click Sign In Button
     DeviceHelper.Allow App Permission
     Run Keyword And Ignore Error        DeviceHelper.Allow App Permission
-    BannerLogic.Close Home Banner
+    DeviceHelper.Close Homepage Blocker
     HomepagePage.Verify On Homepage
 
 Open App, Login, and Post Content
     Open App and Login
     NavbarHelper.Click Floating Button
-    Sleep       3s
     NavbarHelper.Verify Floating Button Submenu Shown
     NavbarHelper.Click Hyppepic Section
     DeviceHelper.Allow App Permission
     DeviceHelper.Allow App Permission
-    Sleep       3s
     CameraLogic.Capture With Camera
     CameraLogic.Press Upload Button
     UploadDetailsPage.Verify On Upload Details Page

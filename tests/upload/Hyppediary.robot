@@ -54,7 +54,7 @@ Upload Hyppediary via Import Media
     BannerLogic.Close Successfully Uploaded Banner
     HomepagePage.Verify On Homepage
 
-View Hyppediary Content Details
+View Hyppediary Fullscreen
     # Arrange
     HomepageLogic.Select Hyppediary Tab
 
@@ -64,7 +64,7 @@ View Hyppediary Content Details
     # Assertion
     ContentDetailsPage.Verify On Content Details Page
 
-Click on Like at Hyppediary Content Details
+Click on Like at Hyppediary Fullscreen
     # Arrange
     HomepageLogic.Select Hyppediary Tab
 
@@ -75,3 +75,12 @@ Click on Like at Hyppediary Content Details
 
     # Assertion
     ContentDetailsPage.Verify On Content Details Page
+
+Scroll on Hyppediary Fullscreen
+    HomepageLogic.Select Hyppediary Tab
+    HomepagePage.Choose Random Content
+    ContentDetailsPage.Verify On Content Details Page
+    AppiumLibrary.Capture Page Screenshot
+    ContentDetailsLogic.Swipe to Next Content on Fullscreen
+    Sleep       3s
+    AppiumLibrary.Capture Page Screenshot

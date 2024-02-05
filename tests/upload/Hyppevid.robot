@@ -46,7 +46,6 @@ Upload Hyppevid via Camera Capture
     CameraLogic.Press Upload Button
     UploadDetailsPage.Verify On Upload Details Page
     UploadDetailsLogic.Edit Post Details
-    Sleep       3s
     UploadDetailsLogic.Confirm Upload Post
     UploadDetailsLogic.Ignore Content Selling Blocker
 
@@ -54,7 +53,7 @@ Upload Hyppevid via Camera Capture
     BannerLogic.Close Successfully Uploaded Banner
     HomepagePage.Verify On Homepage
 
-View Hyppevid Content Details
+View Hyppevid Fullscreen
     # Arrange
     HomepageLogic.Select Hyppevid Tab
 
@@ -64,13 +63,12 @@ View Hyppevid Content Details
     # Assertion
     ContentDetailsPage.Verify On Hyppevid Fullscreen
 
-Click on Like at Hyppevid Content Details
+Click on Like at Hyppevid Fullscreen
     # Arrange
     HomepageLogic.Select Hyppevid Tab
 
     # Action
     HomepagePage.Choose Random Content
-    Sleep       2s
     ContentDetailsPage.Tap Hyppevid screen
     Sleep       2s
     ContentDetailsLogic.Click Like Vid Button

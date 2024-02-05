@@ -22,4 +22,4 @@ Verify Save Profile Success Banner
     AppiumLibrary.Wait Until Element Is Visible         //android.view.View[@content-desc="Sukses perbarui informasi pribadi"]      timeout=10s
 
 Verify Hyppepic Content Successfully Edited Banner Shown
-    AppiumLibrary.Wait Until Element Is Visible         xpath=//android.widget.ImageView[@content-desc="Hyppepic Anda berhasil disimpan"]           timeout=90s
+    AppiumLibrary.Wait Until Element Is Visible         xpath=//android.widget.ImageView[@content-desc="Hyppepic Anda berhasil disimpan"]           timeout=10s

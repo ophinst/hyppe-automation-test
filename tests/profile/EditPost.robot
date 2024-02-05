@@ -7,13 +7,12 @@ Suite Teardown    Close Appium Server
 
 *** Test Case ***
 User Edit Post via Profile Page
-    [Documentation]     Waiting for client side bug fixed
     # Arrange
     NavbarHelper.Verify Profile Section Shown
     NavbarHelper.Click Profile Section
-    Sleep       3s
+    ProfilePage.Verify on Profile Page
     ProfileLogic.Select Random Post on Profile Page
-    Sleep       3s
+    Sleep   0.5s
     ProfilePage.Click on Setting
 
     # Action
@@ -25,7 +24,6 @@ User Edit Post via Profile Page
     UploadDetailsPage.Click on Confirm Edit Post
 
     # Assertion
-    DeviceHelper.Verify Success Notification Shown
-    # BannerPage.Verify Hyppepic Content Successfully Edited Banner Shown
+    BannerPage.Verify Hyppepic Content Successfully Edited Banner Shown
 
 

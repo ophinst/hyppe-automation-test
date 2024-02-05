@@ -50,7 +50,7 @@ Upload Hyppepic via Camera Capture
     BannerLogic.Close Successfully Uploaded Banner
     HomepagePage.Verify On Homepage
 
-View Hyppepic Content Details
+View Hyppepic Fullscreen
     # Arrange
     HomepageLogic.Select Hyppepic Tab
 
@@ -60,7 +60,7 @@ View Hyppepic Content Details
     # Assertion
     ContentDetailsPage.Verify On Content Details Page
 
-Click on Like at Hyppepic Content Details
+Click on Like at Hyppepic Fullscreen
     # Arrange
     HomepageLogic.Select Hyppepic Tab
 
@@ -72,7 +72,7 @@ Click on Like at Hyppepic Content Details
     # Assertion
     ContentDetailsPage.Verify On Content Details Page
 
-Comment On Hyppepic Content Details
+Comment On Hyppepic Fullscreen
     # Arrange
     HomepageLogic.Select Hyppepic Tab
     HomepagePage.Choose Random Content

@@ -16,3 +16,7 @@ Choose Random Device Media
 
 Verify Success Notification Shown
     AppiumLibrary.Wait Until Page Contains      Congratulations         timeout=60s
+
+Close Homepage Blocker
+    ${status} =         Run Keyword And Return Status       BannerLogic.Close Home Banner
+    Run Keyword If    '${status}' == 'False'    DeviceHelper.Press Back

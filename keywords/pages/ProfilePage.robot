@@ -1,6 +1,6 @@
 *** Keywords ***
 Verify on Profile Page
-	Sleep		3s
+	Sleep		2s
     AppiumLibrary.Page Should Contain Text          Profil
 
 Verify Edit Profile Button Shown
@@ -33,6 +33,9 @@ Select Random Post on Profile Page
     ${y}=       Set Variable    1260
     @{coordinate}=      Create List     ${x}    ${y}
     AppiumLibrary.Tap With Positions     ${500}  ${coordinate}
+
+Verify Post Setting Shown
+    AppiumLibrary.Wait Until Element Is Visible     xpath=//android.view.View[@index=2]     timeout=10s
 
 Click on Setting
     AppiumLibrary.Click Element         xpath=//android.view.View[@index=2]
