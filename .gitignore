@@ -5,3 +5,4 @@ report.html
 *.pyc
 appium-log.txt
 __pycache__
+.vscode/
