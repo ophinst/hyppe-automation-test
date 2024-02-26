@@ -1,6 +1,6 @@
 *** Keywords ***
 Verify On Homepage
-    AppiumLibrary.Wait Until Page Contains         Cerita Anda              timeout=15s
+    AppiumLibrary.Wait Until Element Is Visible         xpath=//*[@content-desc='Cerita Anda' or @content-desc='Your story']              timeout=15s
     
 Verify Hyppepic Tab
     AppiumLibrary.Wait Until Element Is Visible         xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.ScrollView/android.view.View[4]/android.view.View[@index=0]   timeout=15s
@@ -31,8 +31,33 @@ Verify Hyppevid Tab Is Focused
 
 Choose Random Content
     [Documentation]     Will choose first content appears in the homepage
-    ${x}=       Set Variable    235
-    ${y}=       Set Variable    1261
-    @{coordinate}=      Create List     ${x}    ${y}
-    Sleep       3s
+    @{coordinate}=      Create List     235    1261
+    Sleep       1s
     AppiumLibrary.Tap With Positions     ${500}  ${coordinate}
+
+Verify Homepage Blocker
+    AppiumLibrary.Wait Until Element Is Visible         xpath=//*[@content-desc='Temukan ikon ini pada konten dan beli karya digital dari kreator favoritmu dengan mengetuk ikon keranjang!' or @content-desc='Konten dengan ikon ini menunjukkan konten telah memiliki hak kepemilikan yang di lindungi oleh Hyppe!']      timeout=1s
+
+Close Homepage Blocker
+    AppiumLibrary.Click Element         xpath=//*[@content-desc='Temukan ikon ini pada konten dan beli karya digital dari kreator favoritmu dengan mengetuk ikon keranjang!' or @content-desc='Konten dengan ikon ini menunjukkan konten telah memiliki hak kepemilikan yang di lindungi oleh Hyppe!']
+
+Click Follow On Homepage
+    AppiumLibrary.Click Element         xpath=//*[@content-desc="Ikuti"]
+
+Verify Login Card Shown
+    AppiumLibrary.Wait Until Element Is Visible         xpath=//*[@content-desc="Hyppe Login"]      timeout=5s
+
+Click Options On Homepage
+    ${x}=       Set Variable    956
+    ${y}=       Set Variable    822
+    @{coordinate}=      Create List     ${x}    ${y}
+    AppiumLibrary.Tap With Positions     ${500}  ${coordinate}
+
+Verify Ads Shown
+    AppiumLibrary.Wait Until Page Contains      Lewati Iklan        timeout=15s
+
+Verify Ads Not Shown
+    AppiumLibrary.Wait Until Page Does Not Contain      Lewati Iklan
+
+Skip Ads
+    AppiumLibrary.Click Element         xpath=//android.view.View[@content-desc="Lewati Iklan"]

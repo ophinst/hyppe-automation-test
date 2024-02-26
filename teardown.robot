@@ -12,3 +12,10 @@ Kill Appium
 Close Appium Server
     Close Application
     Kill Appium
+
+Start Capturing Logs
+    ${logfile_path}=    Set Variable    /home/dubstic/Workspaces/hyppe-test/logcat.txt
+    Run Process    adb -s ${UDID} logcat -c time > ${logfile_path}    shell=True
+
+Stop Capturing Logs
+    Run Process    pkill -f 'adb logcat'    shell=True

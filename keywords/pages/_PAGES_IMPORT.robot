@@ -9,3 +9,5 @@ Resource    OnboardingPage.robot
 Resource    ContentDetailsPage.robot
 Resource	CommentPage.robot
 Resource	ProfilePage.robot
+Resource    ExplorePage.robot
+Resource    TrendingPage.robot

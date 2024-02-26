@@ -1,8 +1,8 @@
-log.html
-output.xml
-report.html
+*.xml
 *venv/
 *.pyc
 appium-log.txt
 __pycache__
 .vscode/
+logcat.txt
+*.html

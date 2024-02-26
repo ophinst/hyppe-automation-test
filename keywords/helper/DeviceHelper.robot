@@ -4,7 +4,7 @@ Press Back
 
 Allow App Permission
     ${element} =    Set Variable    com.android.permissioncontroller:id/permission_allow_foreground_only_button
-    ${status} =     Run Keyword And Return Status    AppiumLibrary.Wait Until Element Is Visible    id=${element}    timeout=10s
+    ${status} =     Run Keyword And Return Status    AppiumLibrary.Wait Until Element Is Visible    id=${element}    timeout=3s
     Run Keyword If    '${status}' == 'False'    Set Suite Variable    ${element}    com.android.permissioncontroller:id/permission_allow_button
     AppiumLibrary.Click Element    id=${element}
 
@@ -20,3 +20,9 @@ Verify Success Notification Shown
 Close Homepage Blocker
     ${status} =         Run Keyword And Return Status       BannerLogic.Close Home Banner
     Run Keyword If    '${status}' == 'False'    DeviceHelper.Press Back
+
+Get Screen Size
+    ${size} =       AppiumLibrary.Get Element Size          id=android:id/content
+    ${dimension} =  Get Dictionary Values    ${size}
+    Set Global Variable     ${HEIGHT}        ${dimension}[0]
+    Set Global Variable     ${WIDTH}        ${dimension}[1]

@@ -2,6 +2,7 @@
 Library     AppiumLibrary
 Library     DebugLibrary
 Library     Process
+Library     Collections
 
 Resource    setup.robot
 Resource    teardown.robot

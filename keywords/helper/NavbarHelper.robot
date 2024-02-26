@@ -25,3 +25,15 @@ Verify Profile Section Shown
 
 Click Profile Section
     AppiumLibrary.Click Element         xpath=//android.view.View/android.view.View[3]/android.widget.ImageView[4]
+
+Click Explore Section
+    AppiumLibrary.Click Element         xpath=//android.view.View/android.view.View[3]/android.widget.ImageView[2]
+
+Click Homepage Section
+    AppiumLibrary.Click Element         xpath=//android.view.View/android.view.View[3]/android.widget.ImageView[1]
+
+Click Notification Section
+    AppiumLibrary.Click Element         xpath=//android.view.View/android.view.View[3]/android.widget.ImageView[3]
+
+Verify Notification Section Shown
+    AppiumLibrary.Wait Until Element Is Visible         xpath=//android.view.View/android.view.View[3]/android.widget.ImageView[3]      timeout=5s

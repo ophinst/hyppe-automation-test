@@ -7,6 +7,7 @@ Spawn Appium Server
     ...                   stdout=${EXECDIR}/appium-log.txt
     Set Suite Variable    ${APPIUM_INSTANCE}
     Wait Until Appium Ready    ${PORT}    40
+    # Start Capturing Logs
 
 Open App
     Open Application
@@ -22,6 +23,7 @@ Open App
     ...    waitForIdleTimeout=${100}
     ...    uiautomator2ServerInstallTimeout=90000
     ...    adbExecTimeout=90000
+    DeviceHelper.Get Screen Size
 
 Open App and Login
     Open App
@@ -50,4 +52,12 @@ Open App, Login, and Post Content
     UploadDetailsLogic.Confirm Upload Post
     UploadDetailsLogic.Ignore Content Selling Blocker
     BannerLogic.Close Successfully Uploaded Banner
+    HomepagePage.Verify On Homepage
+
+Open App as Guest
+    Open App
+    OnboardingLogic.Select Guest Mode Button
+    DeviceHelper.Allow App Permission
+    Run Keyword And Ignore Error        DeviceHelper.Allow App Permission
+    DeviceHelper.Close Homepage Blocker
     HomepagePage.Verify On Homepage

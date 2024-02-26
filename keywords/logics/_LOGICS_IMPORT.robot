@@ -9,3 +9,5 @@ Resource    HomepageLogic.robot
 Resource    ContentDetailsLogic.robot
 Resource	CommentLogic.robot
 Resource	ProfileLogic.robot
+Resource    ExploreLogic.robot
+Resource    TrendingLogic.robot

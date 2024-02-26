@@ -56,22 +56,23 @@ Upload Hyppevid via Camera Capture
 View Hyppevid Fullscreen
     # Arrange
     HomepageLogic.Select Hyppevid Tab
+    HomepageLogic.Ads Handler
 
     # Action
     HomepagePage.Choose Random Content
 
     # Assertion
-    ContentDetailsPage.Verify On Hyppevid Fullscreen
+    ContentDetailsPage.Verify On Content Details Page
 
 Click on Like at Hyppevid Fullscreen
     # Arrange
     HomepageLogic.Select Hyppevid Tab
+    HomepageLogic.Ads Handler
 
     # Action
     HomepagePage.Choose Random Content
     ContentDetailsPage.Tap Hyppevid screen
-    Sleep       2s
     ContentDetailsLogic.Click Like Vid Button
     
     # Assertion
-    ContentDetailsPage.Verify On Vid Content Details Page
+    ContentDetailsPage.Verify On Content Details Page
