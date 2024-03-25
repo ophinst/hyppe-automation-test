@@ -17,7 +17,7 @@ Select Hyppevid Tab
 Scroll On Homepage and Ignore Blocker
     FOR    ${index}    IN RANGE    6
         ${status}=          Run Keyword And Return Status       HomepagePage.Verify Homepage Blocker
-        Run Keyword If      '${status}'=='True'         HomepagePage.Click Homepage Blocker
+        Run Keyword If      '${status}'=='True'         HomepagePage.Close Homepage Blocker
         ContentDetailsLogic.Swipe Up to Next Content
     END
 

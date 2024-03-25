@@ -7,21 +7,21 @@ Click Comment Button
 
 Click Like Button
     Sleep       0.5s
-    AppiumLibrary.Capture Page Screenshot
+    Run Keyword and Ignore Error        AppiumLibrary.Capture Page Screenshot
     ${status}=          Run Keyword And Return Status     ContentDetailsPage.Verify Cart Icon on Fullscreen
     Run Keyword If      '${status}'=='False'              ContentDetailsPage.Click Hyppepic Fullscreen Like Button
     Run Keyword If      '${status}'=='True'               ContentDetailsPage.Click Hyppepic Fullscreen Like Button When Cart Shown
     Sleep       0.5s
-    AppiumLibrary.Capture Page Screenshot
+    Run Keyword and Ignore Error        AppiumLibrary.Capture Page Screenshot
 
 Click Like Vid Button
     Sleep       0.5s
-    AppiumLibrary.Capture Page Screenshot
+    Run Keyword and Ignore Error        AppiumLibrary.Capture Page Screenshot
     ${status}=          Run Keyword And Return Status     ContentDetailsPage.Verify Cart Icon on Fullscreen
     Run Keyword If      '${status}'=='False'              ContentDetailsPage.Click Hyppevid Fullscreen Like Button
     Run Keyword If      '${status}'=='True'               ContentDetailsPage.Click Hyppevid Fullscreen Like Button When Cart Shown
     Sleep       0.5s
-    AppiumLibrary.Capture Page Screenshot
+    Run Keyword and Ignore Error        AppiumLibrary.Capture Page Screenshot
 
 Swipe to Next Content on Fullscreen
     AppiumLibrary.Swipe     500     2000    0       0       0

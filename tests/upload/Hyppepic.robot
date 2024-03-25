@@ -7,6 +7,7 @@ Suite Teardown    Close Appium Server
 
 *** Test Case ***
 Upload Hyppepic via Import Media
+    [Tags]  Staging
     # Arrange
     NavbarHelper.Verify Floating Button Shown
     NavbarHelper.Click Floating Button
@@ -29,6 +30,7 @@ Upload Hyppepic via Import Media
     HomepagePage.Verify On Homepage
 
 Upload Hyppepic via Camera Capture
+    [Tags]  Staging
     # Arrange
     NavbarHelper.Verify Floating Button Shown
     NavbarHelper.Click Floating Button
@@ -73,6 +75,7 @@ Click on Like at Hyppepic Fullscreen
     ContentDetailsPage.Verify On Content Details Page
 
 Comment On Hyppepic Fullscreen
+    [Tags]  Staging
     # Arrange
     HomepageLogic.Select Hyppepic Tab
     HomepagePage.Choose Random Content

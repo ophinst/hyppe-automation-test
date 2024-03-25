@@ -10,4 +10,15 @@ Get First Hashtag Value
     @{hashtag}=    Split String    ${raw_hashtag}
     [Return]    ${hashtag}[0]
 
+Click On Search Box
+    @{coordinate}=      Create List        540      607
+    AppiumLibrary.Tap With Positions        ${500}      ${coordinate}
 
+Verify On Search Page
+    AppiumLibrary.Wait Until Element Is Visible             xpath=//*[@content-desc="Riwayat Pencarian"]        timeout=10s
+
+Verify View More Button Shown
+    AppiumLibrary.Wait Until Element Is Visible             xpath=//*[@content-desc="Lihat Selengkapnya"]        timeout=10s
+
+Click View More Button
+    AppiumLibrary.Click Element         xpath=//*[@content-desc="Lihat Selengkapnya"]

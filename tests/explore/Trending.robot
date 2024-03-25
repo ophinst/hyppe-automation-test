@@ -13,7 +13,7 @@ User Can See and Scroll Trending Hyppepic Content via Hashtag
     # Action
     ${hashtag}=     ExploreLogic.Click Hashtag On Explore Page
     TrendingPage.Verify On Trending Page with Selected Hashtag  ${hashtag}
-    Sleep       3s
+    Sleep       5s
     TrendingLogic.Select and Scroll Content On Trending Page
     
     # Assertion

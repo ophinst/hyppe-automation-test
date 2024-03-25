@@ -7,6 +7,7 @@ Suite Teardown    Close Appium Server
 
 *** Test Case ***
 User Edit Post via Profile Page
+    [Tags]  Staging
     # Arrange
     NavbarHelper.Verify Profile Section Shown
     NavbarHelper.Click Profile Section

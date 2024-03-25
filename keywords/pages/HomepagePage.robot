@@ -41,6 +41,9 @@ Verify Homepage Blocker
 Close Homepage Blocker
     AppiumLibrary.Click Element         xpath=//*[@content-desc='Temukan ikon ini pada konten dan beli karya digital dari kreator favoritmu dengan mengetuk ikon keranjang!' or @content-desc='Konten dengan ikon ini menunjukkan konten telah memiliki hak kepemilikan yang di lindungi oleh Hyppe!']
 
+Verify Follow Button On Homepage
+    AppiumLibrary.Wait Until Element Is Visible         xpath=//*[@content-desc="Ikuti"]        timeout=5s
+
 Click Follow On Homepage
     AppiumLibrary.Click Element         xpath=//*[@content-desc="Ikuti"]
 

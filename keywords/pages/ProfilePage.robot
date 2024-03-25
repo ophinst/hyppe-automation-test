@@ -1,6 +1,6 @@
 *** Keywords ***
 Verify on Profile Page
-	Sleep		2s
+	Sleep		5s
     AppiumLibrary.Page Should Contain Text          Profil
 
 Verify Edit Profile Button Shown

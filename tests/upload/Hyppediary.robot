@@ -7,6 +7,7 @@ Suite Teardown    Close Appium Server
 
 *** Test Case ***
 Upload Hyppediary via Camera Capture
+    [Tags]  Staging
     # Arrange
     NavbarHelper.Verify Floating Button Shown
     NavbarHelper.Click Floating Button
@@ -30,6 +31,7 @@ Upload Hyppediary via Camera Capture
     HomepagePage.Verify On Homepage
 
 Upload Hyppediary via Import Media
+    [Tags]  Staging
     # Arrange
     NavbarHelper.Verify Floating Button Shown
     NavbarHelper.Click Floating Button

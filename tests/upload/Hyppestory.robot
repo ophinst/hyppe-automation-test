@@ -7,6 +7,7 @@ Suite Teardown    Close Appium Server
 
 *** Test Case ***
 Upload Video on Hyppestory via Camera Capture
+    [Tags]  Staging
     # Arrange
     NavbarHelper.Verify Floating Button Shown
     NavbarHelper.Click Floating Button
@@ -25,6 +26,7 @@ Upload Video on Hyppestory via Camera Capture
     HomepagePage.Verify On Homepage
 
 Upload Photo on Hyppestory via Camera Capture
+    [Tags]  Staging
     # Arrange
     NavbarHelper.Verify Floating Button Shown
     NavbarHelper.Click Floating Button

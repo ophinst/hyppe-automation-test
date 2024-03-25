@@ -7,6 +7,7 @@ Suite Teardown    Close Appium Server
 
 *** Test Case ***
 Upload Hyppevid via Import Media
+    [Tags]  Staging
     # Arrange
     NavbarHelper.Verify Floating Button Shown
     NavbarHelper.Click Floating Button
@@ -32,6 +33,7 @@ Upload Hyppevid via Import Media
     HomepagePage.Verify On Homepage
 
 Upload Hyppevid via Camera Capture
+    [Tags]  Staging
     # Arrange
     NavbarHelper.Verify Floating Button Shown
     NavbarHelper.Click Floating Button
