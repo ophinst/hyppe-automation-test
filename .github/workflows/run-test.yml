@@ -25,7 +25,7 @@ jobs:
         wget https://github.com/ophinst/hyppe-automation-test/releases/download/stg/app-release.apk
 
     - name: Set up Android Emulator
-      uses: reactivecircus/android-emulator-runner@v2
+      uses: reactivecircus/android-emulator@v2
       with:
         api-level: 33
         target: default
