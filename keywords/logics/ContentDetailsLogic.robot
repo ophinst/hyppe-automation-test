@@ -26,10 +26,5 @@ Click Like Vid Button
 Swipe to Next Content on Fullscreen
     AppiumLibrary.Swipe     500     2000    0       0       0
 
-Swipe Up to Next Content
-    ${start_x}=         Evaluate        ${WIDTH} / 2
-    ${start_y}=         Evaluate        ${HEIGHT} * 0.75
-    ${end_x}=           Evaluate        ${WIDTH} / 2
-    ${end_y}=           Evaluate        ${HEIGHT} * 0.025
-    AppiumLibrary.Swipe         ${start_x}      ${start_y}      ${end_x}        ${end_y}        1000
-    Sleep       0.5s
+Scroll Page
+    AppiumLibrary.Swipe         ${start_x}      ${start_y}      ${end_x}        ${end_y}        700

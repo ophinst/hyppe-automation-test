@@ -11,3 +11,4 @@ Resource	CommentPage.robot
 Resource	ProfilePage.robot
 Resource    ExplorePage.robot
 Resource    TrendingPage.robot
+Resource    InterestPage.robot

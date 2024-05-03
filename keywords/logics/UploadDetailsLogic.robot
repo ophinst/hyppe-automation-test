@@ -19,7 +19,7 @@ Confirm Upload Story
 
 Choose to Certify and Sell Content
     ${x}=       Set Variable        480
-    ${y}=       Set Variable        2002
+    ${y}=       Set Variable        1900
     @{coordinate}=      Create List         ${x}    ${y}
     AppiumLibrary.Tap With Positions     ${500}  ${coordinate}
     UploadDetailsPage.Verify on Certify and Sell Content Page

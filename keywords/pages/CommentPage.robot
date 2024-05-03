@@ -4,7 +4,7 @@ Verify On Comment Page
 
 Click On Comment Input
     ${x}=       Set Variable    500
-    ${y}=       Set Variable    2150
+    ${y}=       Set Variable    2230
     @{coordinate}=      Create List     ${x}    ${y}
     AppiumLibrary.Tap With Positions     ${500}  ${coordinate}
 
@@ -15,4 +15,5 @@ Click Kirim Comment Button
     AppiumLibrary.Click Element         xpath = //android.widget.Button[@content-desc="Kirim"]
 
 Verify Comment Sent
+    Sleep       1s
     AppiumLibrary.Page Should Contain Text          Lorem ipsum dolor sit amet, consectetur adipiscing elit.

@@ -11,3 +11,4 @@ Resource	CommentLogic.robot
 Resource	ProfileLogic.robot
 Resource    ExploreLogic.robot
 Resource    TrendingLogic.robot
+Resource    InterestLogic.robot

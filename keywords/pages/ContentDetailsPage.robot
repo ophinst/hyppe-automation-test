@@ -41,7 +41,7 @@ Click Hyppevid Fullscreen Like Button When Cart Shown
 Tap Hyppevid screen
     Sleep       2s
     ${x}=       Evaluate    ${WIDTH}/2
-    ${y}=       Evaluate    ${HEIGHT}/2 + 150
+    ${y}=       Evaluate    ${HEIGHT}/2
     @{coordinate}=      Create List     ${x}    ${y}
     AppiumLibrary.Tap With Positions     ${500}  ${coordinate}
 

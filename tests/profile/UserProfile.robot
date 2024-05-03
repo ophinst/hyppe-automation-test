@@ -49,3 +49,13 @@ User can Share the Content
 	# Assertion
 	Sleep  		3s
 	ProfilePage.Verify Share Content
+
+Go to Other User Profile From Landing Page
+	# Arrange
+	HomepagePage.Verify User Profile Picture Shown in Homepage
+	
+	# Action
+    HomepagePage.Click User Profile Picture Shown in Homepage
+
+	# Assertion
+    ProfilePage.Verify Post On Profile Page Shown

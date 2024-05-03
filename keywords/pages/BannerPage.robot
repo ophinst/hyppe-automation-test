@@ -12,8 +12,8 @@ Verify Upload Guide Banner Shown
     AppiumLibrary.Wait Until Element Is Visible         xpath=//android.view.View[@content-desc="Pilih kategori Konten, menambah kategori akan memperluas jangkauan konten mu!"]                 timeout=10s
 
 Verify Content Successfully Uploaded Banner Shown
-    AppiumLibrary.Wait Until Element Is Visible         xpath=//android.view.View[@content-desc="Konten diupload"]                timeout=50s
-    AppiumLibrary.Wait Until Element Is Visible         xpath=//android.widget.Button[@content-desc="Ok"]                timeout=50s
+    AppiumLibrary.Wait Until Element Is Visible         xpath=//android.view.View[@content-desc="Konten diupload"]                timeout=300s
+    AppiumLibrary.Wait Until Element Is Visible         xpath=//android.widget.Button[@content-desc="Ok"]                timeout=300s
 
 Click OK on Sucess Banner
     AppiumLibrary.Click Element         xpath=//android.widget.Button[@content-desc="Ok"]

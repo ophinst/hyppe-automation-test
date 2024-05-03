@@ -19,7 +19,7 @@ Open App
     ...    newCommandTimeout=15000
     ...    noReset=false
     ...    automationName=UiAutomator2
-    ...    disableWindowAnimation=true
+    ...    disableWindowAnimation=false
     ...    waitForIdleTimeout=${100}
     ...    uiautomator2ServerInstallTimeout=90000
     ...    adbExecTimeout=90000

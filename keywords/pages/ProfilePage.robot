@@ -60,3 +60,9 @@ Verify Edit Post Button Shown
 
 Click Edit Post Button
     AppiumLibrary.Click Element         xpath=//android.widget.ImageView[@content-desc="Sunting"]
+
+Verify Post On Profile Page Shown
+    AppiumLibrary.Wait Until Element Is Visible         xpath=//android.widget.ScrollView/android.view.View         timeout=15s
+
+Verify On Other User Profile Page
+    AppiumLibrary.Wait Until Element Is Visible     xpath=//android.widget.ImageView[@content-desc="Pic"]       timeout=10s

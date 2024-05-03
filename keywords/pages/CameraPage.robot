@@ -9,10 +9,10 @@ Click Import Media Button Shown
     AppiumLibrary.Click Element         xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView[4]
 
 Verify Upload Button Shown
-    AppiumLibrary.Wait Until Element Is Visible         xpath=//android.widget.Button[@content-desc="Selanjutnya"]                 timeout=10s
+    AppiumLibrary.Wait Until Element Is Visible         xpath=//android.widget.Button[@content-desc="Selanjutnya" or @content-desc="Next"]                 timeout=10s
 
 Click Upload Button
-    AppiumLibrary.Click Element         xpath=//android.widget.Button[@content-desc="Selanjutnya"]
+    AppiumLibrary.Click Element         xpath=//android.widget.Button[@content-desc="Selanjutnya" or @content-desc="Next"]
 
 Verify Confirm Upload Story Button
     AppiumLibrary.Wait Until Element Is Visible         xpath=//android.widget.Button[@content-desc="Kirim"]                timeout=10s

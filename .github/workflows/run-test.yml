@@ -61,7 +61,6 @@ jobs:
            sleep 30 # Wait for the emulator to be fully ready
            adb install ./app-release.apk
            adb devices
-           robot --variable APP_PACKAGE:com.hyppe.hyppeapp --variable UDID:emulator-5554 tests
            
          cores: 2
          avd-name: emulator-5554
@@ -74,10 +73,10 @@ jobs:
          enable-hw-keyboard: false
          channel: stable
 
-    # - name: Run Tests
-    #   run: |
-    #     adb devices
-    #     robot --variable APP_PACKAGE:com.hyppe.hyppeapp --variable UDID:emulator-5554 tests
+    - name: Run Tests
+      run: |
+         adb devices
+         robot --variable APP_PACKAGE:com.hyppe.hyppeapp --variable UDID:emulator-5554 tests
 
     - name: Upload test results
       uses: actions/upload-artifact@v2

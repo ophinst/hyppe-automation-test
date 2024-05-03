@@ -17,8 +17,8 @@ User Login
     LoginPage.Verify Sign In Button Shown
     LoginPage.Click Sign In Button
     DeviceHelper.Allow App Permission
-    Sleep       10s
-    DeviceHelper.Press Back
+    DeviceHelper.Allow App Permission
+    DeviceHelper.Close Homepage Blocker
 
     # Assertion
     HomepagePage.Verify On Homepage

@@ -22,3 +22,9 @@ Verify View More Button Shown
 
 Click View More Button
     AppiumLibrary.Click Element         xpath=//*[@content-desc="Lihat Selengkapnya"]
+
+Verify Hyppe Offical Account Shown On Explore Page
+    AppiumLibrary.Wait Until Element Is Visible             xpath=//*[@content-desc="Hyppe" or @content-desc="hyppe"]        timeout=10s
+
+Click Hyppe Offical Account On Explore Page
+    AppiumLibrary.Click Element         xpath=//*[@content-desc="Hyppe" or @content-desc="hyppe"]

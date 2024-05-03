@@ -15,10 +15,10 @@ Click Hyppediary Tab
     AppiumLibrary.Click Element         xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.ScrollView/android.view.View[4]/android.view.View[@index=1]
 
 Verify Hyppevid Tab
-    AppiumLibrary.Wait Until Element Is Visible         xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.ScrollView/android.view.View[4]/android.view.View[@index=2]   timeout=15s
+    AppiumLibrary.Wait Until Element Is Visible         xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.ScrollView/android.view.View[4]/android.view.View[@index=1]   timeout=15s
 
 Click Hyppevid Tab
-    AppiumLibrary.Click Element         xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.ScrollView/android.view.View[4]/android.view.View[@index=2]
+    AppiumLibrary.Click Element         xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.ScrollView/android.view.View[4]/android.view.View[@index=1]
 
 Verify Hyppepic Tab Is Focused
     AppiumLibrary.Element Attribute Should Match            xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.ScrollView/android.view.View[4]/android.view.View[@index=0]           selected        true
@@ -27,7 +27,7 @@ Verify Hyppediary Tab Is Focused
     AppiumLibrary.Element Attribute Should Match            xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.ScrollView/android.view.View[4]/android.view.View[@index=1]           selected        true
 
 Verify Hyppevid Tab Is Focused
-    AppiumLibrary.Element Attribute Should Match            xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.ScrollView/android.view.View[4]/android.view.View[@index=2]           selected        true
+    AppiumLibrary.Element Attribute Should Match            xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.ScrollView/android.view.View[4]/android.view.View[@index=1]           selected        true
 
 Choose Random Content
     [Documentation]     Will choose first content appears in the homepage
@@ -36,7 +36,7 @@ Choose Random Content
     AppiumLibrary.Tap With Positions     ${500}  ${coordinate}
 
 Verify Homepage Blocker
-    AppiumLibrary.Wait Until Element Is Visible         xpath=//*[@content-desc='Temukan ikon ini pada konten dan beli karya digital dari kreator favoritmu dengan mengetuk ikon keranjang!' or @content-desc='Konten dengan ikon ini menunjukkan konten telah memiliki hak kepemilikan yang di lindungi oleh Hyppe!']      timeout=1s
+    AppiumLibrary.Wait Until Element Is Visible         xpath=//*[@content-desc='Temukan ikon ini pada konten dan beli karya digital dari kreator favoritmu dengan mengetuk ikon keranjang!' or @content-desc='Konten dengan ikon ini menunjukkan konten telah memiliki hak kepemilikan yang di lindungi oleh Hyppe!']      timeout=0.5s
 
 Close Homepage Blocker
     AppiumLibrary.Click Element         xpath=//*[@content-desc='Temukan ikon ini pada konten dan beli karya digital dari kreator favoritmu dengan mengetuk ikon keranjang!' or @content-desc='Konten dengan ikon ini menunjukkan konten telah memiliki hak kepemilikan yang di lindungi oleh Hyppe!']
@@ -64,3 +64,9 @@ Verify Ads Not Shown
 
 Skip Ads
     AppiumLibrary.Click Element         xpath=//android.view.View[@content-desc="Lewati Iklan"]
+
+Verify User Profile Picture Shown in Homepage
+    AppiumLibrary.Wait Until Element Is Visible         xpath=//android.view.View[5]/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView[1]      timeout=15s
+
+Click User Profile Picture Shown in Homepage
+    AppiumLibrary.Click Element         xpath=//android.view.View[5]/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView[1]

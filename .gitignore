@@ -6,3 +6,4 @@ __pycache__
 .vscode/
 logcat.txt
 *.html
+*.mp4

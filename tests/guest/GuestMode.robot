@@ -8,16 +8,16 @@ Suite Teardown      Close Appium Server
 *** Test Case ***
 Guest Scroll on Landing Page
     # Arrange and Action
+    AppiumLibrary.Start Screen Recording
     HomepagePage.Verify Hyppepic Tab Is Focused
     HomepageLogic.Scroll On Homepage and Ignore Blocker
-    NavbarHelper.Click Homepage Section
-    HomepageLogic.Select Hyppediary Tab
-    HomepageLogic.Scroll On Homepage and Ignore Blocker
+    Run Keyword And Ignore Error    AppiumLibrary.Capture Page Screenshot
     NavbarHelper.Click Homepage Section
     HomepageLogic.Select Hyppevid Tab
     HomepageLogic.Scroll On Homepage and Ignore Blocker
 
     # Assertion
+    AppiumLibrary.Stop Screen Recording
     [Documentation]     Ignore Error because we can't screenshot on certified content
     Run Keyword And Ignore Error    AppiumLibrary.Capture Page Screenshot
     

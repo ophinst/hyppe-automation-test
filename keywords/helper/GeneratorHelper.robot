@@ -20,3 +20,9 @@ Choose Random Category
         ${category}=    Evaluate    random.choice(${categories})    modules=random
         AppiumLibrary.Click Element             xpath=//android.view.View[@content-desc="${category}"]
     END
+
+Choose Random Interest
+    @{interests}=    Create List    Musik  Film  Wisata  Berita  Hiburan 
+    ${interest}=    Evaluate    random.choice(${interests})    modules=random
+    AppiumLibrary.Click Element             xpath=//android.view.View[@content-desc="${interest}"]
+    Set Global Variable     ${interest}

@@ -15,7 +15,7 @@ Click Hyppediary Section
     AppiumLibrary.Click Element         xpath=//android.widget.ImageView[@index=4]
 
 Click Hyppevid Section
-    AppiumLibrary.Click Element         xpath=//android.widget.ImageView[@index=5]
+    AppiumLibrary.Click Element         xpath=//android.widget.ImageView[@index=4]
 
 Click Hyppestory Section
     AppiumLibrary.Click Element         xpath=//android.widget.ImageView[@index=2]
