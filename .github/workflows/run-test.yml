@@ -31,10 +31,8 @@ jobs:
         target: default
         arch: x86
         profile: pixel
-
-    - name: Install APK on Emulator
-      run: |
-        adb install ./app-release.apk
+        script: |
+         adb install ./app-release.apk
 
     - name: Run Robot Framework Tests
       uses: tarathep/robotframework-github-action@v1.0
