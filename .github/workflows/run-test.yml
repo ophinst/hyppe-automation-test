@@ -49,13 +49,13 @@ jobs:
       uses: tarathep/robotframework-github-action@v1.0
       with:
         tests_dir: '${{ github.workspace }}/tests'
-        reports_dir: '${{ github.workspace }}/tests/robot/reports'
+        reports_dir: '${{ github.workspace }}'
 
     - name: Upload test results
       uses: actions/upload-artifact@v2
       with:
         name: test-results
-        path: ${{ github.workspace }}/tests/robot/reports/*.xml
+        path: ${{ github.workspace }}/*.xml
 
  generate_report:
     if: always()
@@ -72,7 +72,7 @@ jobs:
       uses: joonvena/robotframework-reporter-action@v2.4
       with:
         gh_access_token: ${{ secrets.GITHUB_TOKEN }}
-        report_path: '${{ github.workspace }}/tests/robot/reports'
+        report_path: '${{ github.workspace }}'
         summary: 'true'
         only_summary: 'false'
         show_passed_tests: 'true'
@@ -81,4 +81,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: html-report
-        path: ${{ github.workspace }}/tests/robot/reports/*.html
+        path: ${{ github.workspace }}/*.html
