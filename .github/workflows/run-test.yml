@@ -32,6 +32,7 @@ jobs:
         arch: x86
         profile: pixel
         script: |
+         sleep 30
          adb install ./app-release.apk
 
     - name: Run Robot Framework Tests
