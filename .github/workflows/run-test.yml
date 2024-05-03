@@ -67,7 +67,7 @@ jobs:
     - name: Run Tests
       run: |
         adb devices
-        robot --variable APP_PACKAGE:com.hyppe.hyppeapp --variable UDID:emulator-5554 -t tests
+        robot --variable APP_PACKAGE:com.hyppe.hyppeapp --variable UDID:emulator-5554 tests
 
     - name: Upload test results
       uses: actions/upload-artifact@v2
