@@ -24,16 +24,26 @@ jobs:
       run: |
         wget https://github.com/ophinst/hyppe-automation-test/releases/download/stg/app-release.apk
 
-    - name: Set up Android Emulator
+    - name: Set up Android Emulator and Install APK
       uses: reactivecircus/android-emulator-runner@v2
       with:
-        api-level: 33
-        target: default
-        arch: x86
-        profile: pixel
-        script: |
-         sleep 30
-         adb install ./app-release.apk
+         api-level: 28
+         target: default
+         arch: x86
+         profile: pixel
+         script: |
+           sleep 30 # Wait for the emulator to be fully ready
+           adb install ./app-release.apk
+         cores: 2
+         avd-name: test
+         force-avd-creation: true
+         emulator-boot-timeout: 600
+         emulator-options: -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim
+         disable-animations: true
+         disable-spellchecker: false
+         disable-linux-hw-accel: auto
+         enable-hw-keyboard: false
+         channel: stable
 
     - name: Run Robot Framework Tests
       uses: tarathep/robotframework-github-action@v1.0
