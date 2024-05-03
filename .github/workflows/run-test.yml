@@ -32,12 +32,12 @@ jobs:
     # - name: Start Appium Server
     #   run: appium
 
-    - name: Wait for emulator to be ready
-      run: |
-       until adb devices | grep emulator-5554; do
-        echo "Waiting for emulator to be ready..."
-        sleep 5
-       done
+    # - name: Wait for emulator to be ready
+    #   run: |
+    #    until adb devices | grep emulator-5554; do
+    #     echo "Waiting for emulator to be ready..."
+    #     sleep 5
+    #    done
 
     - name: Adjust permissions for Robot Framework reports
       run: chmod -R 777 ${{ github.workspace }}
