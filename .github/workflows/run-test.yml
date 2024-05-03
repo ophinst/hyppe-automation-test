@@ -48,6 +48,9 @@ jobs:
     - name: Adjust permissions for Robot Framework reports
       run: chmod -R 777 ${{ github.workspace }}
 
+    - name: Install requirements
+      run: pip install -r ${{ github.workspace }}/requirements.txt
+
     - name: Run Robot Framework Tests
       uses: tarathep/robotframework-github-action@v1.0
       with:
