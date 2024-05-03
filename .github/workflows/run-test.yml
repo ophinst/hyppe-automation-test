@@ -45,17 +45,20 @@ jobs:
          enable-hw-keyboard: false
          channel: stable
 
+    - name: Adjust permissions for Robot Framework reports
+      run: chmod -R 777 ${{ github.workspace }}/reports
+
     - name: Run Robot Framework Tests
       uses: tarathep/robotframework-github-action@v1.0
       with:
         tests_dir: '${{ github.workspace }}/tests'
-        reports_dir: '${{ github.workspace }}'
+        reports_dir: '${{ github.workspace }}/reports'
 
     - name: Upload test results
       uses: actions/upload-artifact@v2
       with:
         name: test-results
-        path: ${{ github.workspace }}/*.xml
+        path: ${{ github.workspace }}/reports/*.xml
 
  generate_report:
     if: always()
@@ -72,7 +75,7 @@ jobs:
       uses: joonvena/robotframework-reporter-action@v2.4
       with:
         gh_access_token: ${{ secrets.GITHUB_TOKEN }}
-        report_path: '${{ github.workspace }}'
+        report_path: '${{ github.workspace }}/reports'
         summary: 'true'
         only_summary: 'false'
         show_passed_tests: 'true'
@@ -81,4 +84,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: html-report
-        path: ${{ github.workspace }}/*.html
+        path: ${{ github.workspace }}/reports/*.html
