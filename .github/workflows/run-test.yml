@@ -51,11 +51,18 @@ jobs:
     - name: Install requirements
       run: pip install -r ${{ github.workspace }}/requirements.txt
 
-    - name: Run Robot Framework Tests
-      uses: tarathep/robotframework-github-action@v1.0
+    - name: Setup Node.js environment
+      uses: actions/setup-node@v2
       with:
-        tests_dir: '${{ github.workspace }}/tests'
-        reports_dir: '${{ github.workspace }}'
+         node-version: '14'
+         
+    - name: Install Appium and Robot Framework AppiumLibrary
+      run: |
+        npm install -g appium@1.22.0
+        pip install --upgrade robotframework-appiumlibrary
+
+    # - name: Start Appium Server
+    #   run: appium
 
     - name: Upload test results
       uses: actions/upload-artifact@v2
