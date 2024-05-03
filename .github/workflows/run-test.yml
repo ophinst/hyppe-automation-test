@@ -24,26 +24,20 @@ jobs:
       run: |
         wget https://github.com/ophinst/hyppe-automation-test/releases/download/stg/app-release.apk
 
-    - name: Set up Android Emulator and Install APK
-      uses: reactivecircus/android-emulator-runner@v2
-      with:
-         api-level: 28
-         target: default
-         arch: x86_64
-         profile: pixel
-         script: |
-           sleep 30 # Wait for the emulator to be fully ready
-           adb install ./app-release.apk
-         cores: 2
-         avd-name: test
-         force-avd-creation: true
-         emulator-boot-timeout: 600
-         emulator-options: -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim
-         disable-animations: true
-         disable-spellchecker: false
-         disable-linux-hw-accel: auto
-         enable-hw-keyboard: false
-         channel: stable
+    - name: Install Appium and Robot Framework AppiumLibrary
+      run: |
+        npm install -g appium@1.22.0
+        pip install --upgrade robotframework-appiumlibrary
+
+    # - name: Start Appium Server
+    #   run: appium
+
+    - name: Wait for emulator to be ready
+      run: |
+       until adb devices | grep emulator-5554; do
+        echo "Waiting for emulator to be ready..."
+        sleep 5
+       done
 
     - name: Adjust permissions for Robot Framework reports
       run: chmod -R 777 ${{ github.workspace }}
@@ -55,19 +49,35 @@ jobs:
       uses: actions/setup-node@v2
       with:
          node-version: '14'
-         
-    - name: Install Appium and Robot Framework AppiumLibrary
-      run: |
-        npm install -g appium@1.22.0
-        pip install --upgrade robotframework-appiumlibrary
 
-    # - name: Start Appium Server
-    #   run: appium
+    - name: Set up Android Emulator and Install APK
+      uses: reactivecircus/android-emulator-runner@v2
+      with:
+         api-level: 28
+         target: default
+         arch: x86_64
+         profile: pixel
+         script: |
+           sleep 30 # Wait for the emulator to be fully ready
+           adb install ./app-release.apk
+           adb devices
+           robot --variable APP_PACKAGE:com.hyppe.hyppeapp --variable UDID:emulator-5554 tests
+           
+         cores: 2
+         avd-name: emulator-5554
+         force-avd-creation: true
+         emulator-boot-timeout: 600
+         emulator-options: -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim
+         disable-animations: true
+         disable-spellchecker: false
+         disable-linux-hw-accel: auto
+         enable-hw-keyboard: false
+         channel: stable
 
-    - name: Run Tests
-      run: |
-        adb devices
-        robot --variable APP_PACKAGE:com.hyppe.hyppeapp --variable UDID:emulator-5554 tests
+    # - name: Run Tests
+    #   run: |
+    #     adb devices
+    #     robot --variable APP_PACKAGE:com.hyppe.hyppeapp --variable UDID:emulator-5554 tests
 
     - name: Upload test results
       uses: actions/upload-artifact@v2
